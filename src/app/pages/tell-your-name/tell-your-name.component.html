@@ -1,1 +1,16 @@
-<p>tell-your-name works!</p>
+<div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+  <div class="my-card">
+    <div class="my-card__inner">
+
+      <img src="../../../assets/coruja.png" class="my-card__inner--img" alt="" srcset="">
+
+      <h1 class="my-card__inner--title">Olá, qual é o seu nome?</h1>
+
+      <div>
+        <input type="text" [(ngModel)]="kidName" />
+        <button (click)="getKidName()">Vamos lá</button>
+      </div>
+
+    </div>
+  </div>
+</div>
