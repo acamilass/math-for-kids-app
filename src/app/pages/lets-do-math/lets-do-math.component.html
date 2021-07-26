@@ -1,1 +1,35 @@
-<p>lets-do-math works!</p>
+<div class="container d-flex flex-column justify-content-around align-items-center" style="height: 90vh;">
+  <div class="math-signs">
+
+    <div class="math-signs__btn" (click)="selectType('+')">
+      <img src="../../../assets/plus-sign.png" alt="">
+    </div>
+
+    <div class="math-signs__btn" (click)="selectType('-')">
+      <img src="../../../assets/less-sign.png" alt="">
+    </div>
+
+    <div class="math-signs__btn" (click)="selectType('x')">
+      <img src="../../../assets/mult-sign.png" alt="">
+    </div>
+
+  </div>
+
+  <div class="flash-card">
+    <div class="flash-card__numbers">
+      <div class="sign">{{ sign }}</div>
+      <div class="numbers">
+        <span>{{ firstNumber }}</span>
+        <span>{{ secondNumber }}</span>
+      </div>
+    </div>
+
+    <div class="flash-card__divider"></div>
+
+    <div class="flash-card__answers">
+      <span *ngFor="let answer of arrAnswers" (click)="setupClickAnswer(sign, answer)">
+        {{ answer }}
+      </span>
+    </div>
+  </div>
+</div>
