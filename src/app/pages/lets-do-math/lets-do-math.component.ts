@@ -13,6 +13,8 @@ export class LetsDoMathComponent implements OnInit {
   sign: string = '+';
   arrAnswers: Array<number> = [];
 
+  ctrlMsg: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -82,6 +84,7 @@ export class LetsDoMathComponent implements OnInit {
     if (value === result) {
       this.initialize(sign);
     } else if (value !== result) {
+      this.ctrlMsg = true;
       const index = this.arrAnswers.indexOf(value);
 
       if (index > -1) {

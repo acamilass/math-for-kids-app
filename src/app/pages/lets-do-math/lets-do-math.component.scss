@@ -60,5 +60,12 @@
       cursor: pointer;
     }
   }
+}
 
+.resultMsg {
+  visibility: hidden;
+}
+
+.resultMsg__show {
+  visibility: visible;
 }

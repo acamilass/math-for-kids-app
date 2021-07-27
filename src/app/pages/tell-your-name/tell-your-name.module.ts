@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TellYourNameComponent } from './tell-your-name.component';
 import { TellYourNameRoutingModule } from './tell-your-name-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     TellYourNameRoutingModule,
-    FormsModule
+    FormsModule,
+    ComponentsModule
   ]
 })
 export class TellYourNameModule { }
