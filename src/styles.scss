@@ -7,3 +7,85 @@
 body {
   background-color: #fe938c;
 }
+
+.error {
+  background-color: #db5461;
+
+  box-sizing: border-box;
+
+  width: 320px;
+  height: 70px;
+  border-radius: 5px;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__icon {
+
+    width: 60px;
+    height: 60px;
+    background-color: #eac8ca;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  &__msg {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+
+    span {
+      color: #eac8ca;
+    }
+  }
+}
+
+.success {
+  background-color: #5b8e7d;
+
+  box-sizing: border-box;
+
+  width: 320px;
+  height: 70px;
+  border-radius: 5px;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__icon {
+
+    width: 60px;
+    height: 60px;
+    background-color: #eac8ca;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  &__msg {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+
+    span {
+      color: #ead2ac;
+    }
+  }
+}

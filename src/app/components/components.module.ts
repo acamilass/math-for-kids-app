@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header/header.component';
-import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
-import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { AlertComponent } from './alerts/alert/alert.component';
+import { AlertService } from './alerts/alert-message.service';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SuccessDialogComponent,
-    ErrorDialogComponent
+    AlertComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     HeaderComponent,
-    SuccessDialogComponent,
-    ErrorDialogComponent
+    AlertComponent
+  ],
+  providers: [
+    AlertService
   ]
 })
 export class ComponentsModule { }

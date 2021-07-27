@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from 'src/app/components/alerts/alert-message.service';
 
 @Component({
   selector: 'app-lets-do-math',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lets-do-math.component.scss']
 })
 export class LetsDoMathComponent implements OnInit {
+
+  options = {
+    autoClose: true,
+    keepAfterRouteChange: false
+  };
 
   kidName: any;
   firstNumber: number = 0;
@@ -15,7 +21,7 @@ export class LetsDoMathComponent implements OnInit {
 
   ctrlMsg: boolean = false;
 
-  constructor() { }
+  constructor(private readonly alertService: AlertService) { }
 
   ngOnInit(): void {
     this.initialize();
@@ -57,7 +63,7 @@ export class LetsDoMathComponent implements OnInit {
       this.arrAnswers.push(ctrlNumber);
     }
 
-    console.log(this.shuffle(this.arrAnswers));
+    this.shuffle(this.arrAnswers);
 
   }
 
@@ -82,9 +88,11 @@ export class LetsDoMathComponent implements OnInit {
     const result = this.math(sign);
 
     if (value === result) {
+      this.alertService.success('EBAAA VOCÊ ACERTOU', this.options);
       this.initialize(sign);
     } else if (value !== result) {
-      this.ctrlMsg = true;
+      this.alertService.error('OPS TENTA DE NOVO', this.options);
+
       const index = this.arrAnswers.indexOf(value);
 
       if (index > -1) {
