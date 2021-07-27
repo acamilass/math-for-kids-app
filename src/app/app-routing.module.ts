@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NameResolver } from './resolvers/name.resolver';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/tell-your-name/tell-your-name.module').then(m => m.TellYourNameModule)
+    loadChildren: () => import('./pages/tell-your-name/tell-your-name.module').then(m => m.TellYourNameModule),
+    // resolve: [NameResolver]
   },
   {
     path: 'continhas',

@@ -7,7 +7,7 @@
       <h1 class="my-card__inner--title">Olá, qual é o seu nome?</h1>
 
       <div>
-        <input type="text" [(ngModel)]="kidName" />
+        <input type="text" [(ngModel)]="kidName" (keyup.enter)="getKidName()" />
         <button (click)="getKidName()">Vamos lá</button>
       </div>
 

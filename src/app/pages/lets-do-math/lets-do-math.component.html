@@ -2,21 +2,21 @@
 <div class="container d-flex flex-column justify-content-evenly align-items-center" style="height: 90vh;">
   <div class="math-signs">
 
-    <div class="math-signs__btn" (click)="selectType('+')">
+    <div class="math-signs__btn" id="sign__btn-1" (click)="selectType('+')">
       <img src="../../../assets/plus-sign.png" alt="">
     </div>
 
-    <div class="math-signs__btn" (click)="selectType('-')">
+    <div class="math-signs__btn" id="sign__btn-2" (click)="selectType('-')">
       <img src="../../../assets/less-sign.png" alt="">
     </div>
 
-    <div class="math-signs__btn" (click)="selectType('x')">
+    <div class="math-signs__btn" id="sign__btn-3" (click)="selectType('x')">
       <img src="../../../assets/mult-sign.png" alt="">
     </div>
 
   </div>
 
-  <div class="flash-card">
+  <div class="flash-card" id="flash-card">
     <div class="flash-card__numbers">
       <div class="sign">{{ sign }}</div>
       <div class="numbers">
