@@ -1,3 +1,12 @@
+.math-page {
+  height: 90vh;
+  padding: 0;
+
+  @media (max-width: 56.25em) {
+    height: 75rem;
+  }
+}
+
 .math-signs {
   display: flex;
 
@@ -6,12 +15,12 @@
     border-radius: 50%;
     cursor: pointer;
 
-    padding: 5px;
-    margin-right: 10px;
+    padding: .5rem;
+    margin-right: 1rem;
 
     img {
-      height: 70px;
-      width: 70px;
+      height: 7rem;
+      width: 7rem;
     }
   }
 }
@@ -19,13 +28,18 @@
 .flash-card {
   background-color: #eac8ca;
   border-radius: 5px;
-  padding: 20px;
+  padding: 2rem;
 
-  height: 450px;
-  width: 320px;
+  height: 45rem;
+  width: 32rem;
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 56.25em) {
+    height: 42rem;
+    width: 30rem;
+  }
 
   &__numbers {
     display: flex;
@@ -33,11 +47,11 @@
     align-items: flex-end;
 
     .sign {
-      font-size: 120px;
+      font-size: 12rem;
     }
 
     .numbers {
-      font-size: 100px;
+      font-size: 10rem;
       text-align: right;
 
       display: flex;
@@ -53,19 +67,11 @@
     display: flex;
     justify-content: space-between;
 
-    font-size: 50px;
-    margin-top: 20px;
+    font-size: 5rem;
+    margin-top: 2rem;
 
     span {
       cursor: pointer;
     }
   }
-}
-
-.resultMsg {
-  visibility: hidden;
-}
-
-.resultMsg__show {
-  visibility: visible;
 }

@@ -1,31 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-  font-family: 'Lexend', sans-serif;
-  color: #2e4057;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 56.25em) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 112.5em) {
+    font-size: 75%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 body {
+  font-family: 'Lexend', sans-serif;
+  color: #2e4057;
   background-color: #fe938c;
 }
 
 .error {
   background-color: #db5461;
 
-  box-sizing: border-box;
-
-  width: 320px;
-  height: 70px;
+  width: 36rem;
+  height: 7rem;
   border-radius: 5px;
-  padding: 5px;
+  padding: .5rem;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
+  @media (max-width: 56.25em) {
+    width: 34rem;
+  }
+
   &__icon {
 
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     background-color: #eac8ca;
     border-radius: 50%;
 
@@ -34,14 +63,14 @@ body {
     justify-content: center;
 
     img {
-      height: 50px;
+      height: 5rem;
     }
   }
 
   &__msg {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-left: 20px;
+    margin-left: 2rem;
 
     span {
       color: #eac8ca;
@@ -54,19 +83,23 @@ body {
 
   box-sizing: border-box;
 
-  width: 320px;
-  height: 70px;
+  width: 36rem;
+  height: 7rem;
   border-radius: 5px;
-  padding: 5px;
+  padding: .5rem;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
+  @media (max-width: 56.25em) {
+    width: 34rem;
+  }
+
   &__icon {
 
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     background-color: #eac8ca;
     border-radius: 50%;
 
@@ -75,14 +108,18 @@ body {
     justify-content: center;
 
     img {
-      height: 50px;
+      height: 5rem;
     }
   }
 
   &__msg {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
-    margin-left: 20px;
+    margin-left: 2rem;
+
+    @media (max-width: 56.25em) {
+      font-size: 2rem;
+    }
 
     span {
       color: #ead2ac;
