@@ -59,7 +59,7 @@ export class LetsDoMathComponent implements OnInit {
     let ctrlNumber = answer;
 
     for (var i = 0; i < 2; i++) {
-      ctrlNumber = i < 3 ? answer + this.generateRandomNumbers() : answer - this.generateRandomNumbers();
+      ctrlNumber = i < 2 ? answer + this.generateRandomNumbers() : answer - this.generateRandomNumbers();
       this.arrAnswers.push(ctrlNumber);
     }
 
@@ -107,9 +107,16 @@ export class LetsDoMathComponent implements OnInit {
   initialize(sign?: string): void {
     this.kidName = window.localStorage.getItem('nome');
 
-    this.firstNumber = this.generateRandomNumbers();
-    this.secondNumber = this.generateRandomNumbers();
+    const number1 = this.generateRandomNumbers();
+    const number2 = this.generateRandomNumbers();
 
+    if (number2 > number1) {
+      this.firstNumber = number2;
+      this.secondNumber = number1;
+    } else {
+      this.firstNumber = number1;
+      this.secondNumber = number2;
+    }
 
     if (sign)
       this.selectType(sign);
