@@ -1,8 +1,8 @@
-<div *ngFor="let alert of alerts" class="{{ cssClass(alert) }}">
-  <div class="{{ cssClass(alert) }}__icon" >
+<div *ngFor="let alert of alerts" class="alert {{ cssClass(alert) }}">
+  <div class="alert__icon {{ cssClass(alert) }}__icon" >
     <img src="../../../assets/{{ cssClass(alert) }}-icon.png" alt="">
   </div>
-  <div class="{{ cssClass(alert) }}__msg">
+  <div class="alert__msg {{ cssClass(alert) }}__msg">
     <span [innerHTML]="alert.message"></span>
   </div>
 </div>
