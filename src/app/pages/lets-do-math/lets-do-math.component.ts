@@ -9,7 +9,7 @@ import { AlertService } from 'src/app/components/alerts/alert-message.service';
 export class LetsDoMathComponent implements OnInit {
 
   options = {
-    autoClose: false,
+    autoClose: true,
     keepAfterRouteChange: false
   };
 
